@@ -20,7 +20,7 @@
           <label for="username">Enter username: </label>
           <input
             type="text"
-            id="username"
+            id="u"
             name="username"
             placeholder="Optional"
             value="user"
@@ -49,7 +49,7 @@
     <script>
       document.getElementById("get_started_btn").onclick = function () {
         var audio = new Audio("sound.wav");
-        var users = document.getElementById("username").value;
+        var users = document.getElementById("u").value;
         localStorage.setItem("textValue1", users);
         audio.play();
         setTimeout(() => {
