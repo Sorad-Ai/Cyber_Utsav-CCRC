@@ -167,9 +167,9 @@ let timerw = 0;
     timerw = savedValue;
     console.log(timerw);
 
-    var savedValue1 = localStorage.getItem("textValue"); // Retrieve the value from localStorage
+    var savedValue1 = localStorage.getItem("textValue1"); // Retrieve the value from localStorage
     users = savedValue1;
-    console.log(timerw);
+    console.log(users)
 
   console.log(typeof(timerw));
   let currentQuestionIndex = 0;
@@ -224,7 +224,9 @@ const currentQuestion = questions[currentQuestionIndex]
       // Set up option click event to enable the Next button
       input.addEventListener("change", function () {
         selectedAnswer = parseInt(this.value);
-        label.style.backgroundColor = "#6e0004";
+        var audio = new Audio("../sound.wav");
+        audio.play();
+        // label.style.backgroundColor = "#6e0004";
         nextButton.disabled = false;
       });
   
@@ -246,6 +248,8 @@ const currentQuestion = questions[currentQuestionIndex]
   
   // Function to handle clicking "Next"
   nextButton.addEventListener("click", function () {
+    var audio = new Audio("../sound.wav");
+        audio.play();
     // Check if the selected answer is correct
     if (selectedAnswer === questions[currentQuestionIndex].answer) {
       console.log("Correct answer!");
@@ -277,7 +281,7 @@ const currentQuestion = questions[currentQuestionIndex]
   }
   function endQuiz(){
     timerDisplay.textContent = "Your Time is Up"; 
-    questionText.textContent = `Quiz completed! Your score is ${score} out of ${questions.length}`;
+    questionText.textContent = `Dear ${users} Your score is ${score} out of ${questions.length}`;
     optionsContainer.innerHTML = "";
     nextButton.disabled = true;
     nextButton.style.display = "none"
