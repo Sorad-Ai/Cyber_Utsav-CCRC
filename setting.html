@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../global.css">
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <div class="main-div">
-        <div class="img">
+      <div class="img">
+        <!-- Add an image here if needed -->
+      </div>
 
+      <div class="sett">
+        <h1>Settings</h1>
+
+        <!-- <div class="level"> -->
+          <!-- Difficulty Level Combo Box -->
+        <label for="difficulty">Difficulty Level:
+        <select id="difficulty" name="difficulty" class="input-field">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </label>
+        <!-- </div> -->
+
+        <br />
+        <!-- Time Text Box -->
+        <div class="time">
+          <label for="time">Time (minutes):
+        <input
+          type="number"
+          id="time"
+          name="time"
+          class="input-field"
+          placeholder="Enter time in minutes"
+        /></label>
         </div>
-
-        <div class="sett">
-            <h1>Settings</h1>
-
-           
-            
-        </div>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>
