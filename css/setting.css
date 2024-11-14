@@ -1,0 +1,122 @@
+
+.sett{
+    position:relative;
+    width: 50%;
+    height: 100%;
+    font-family: Poppins,sans-serif;
+     top: 40px;
+    display:flex;
+    flex-direction:column;
+
+} 
+
+
+.img{
+    background-image: url(../assets/setting.gif);
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 20px;
+    height:100%;
+    width:50%;
+}
+
+
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+    color: #222;
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+
+
+label {
+    font-size: 20px;
+    color: #555;
+    transform: translate(-77px);
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.input-field:focus {
+    border-color: #0066cc;
+    outline: none;
+}
+
+#difficulty option {
+    font-size: 16px;
+}
+
+select{
+    max-width: 300px;
+}
+
+input{
+    max-width: 270px;
+}
+
+#difficulty {
+    appearance: none;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 8px;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+
+
+
+.opt{
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.start-btn {
+    font-size: 20px;
+    width: 180px;
+    height: 50px;
+    text-align: center;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(to right, #f4c81a, #fdf257);
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between image and text */
+    border: none;
+    justify-content: center;
+    
+    padding-left: -20px;
+    
+  }
+
+
+  @media (max-width: 1278px) {
+    h1{
+        color: black;
+    }
+
+    label{
+        color: black;
+    }
+
+    .sett{
+        width: 100%;
+    }
+  }

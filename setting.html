@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../global.css" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/setting.css" />
+    <script src="./js/questions.js"></script>
+
   </head>
   <body>
     <div class="main-div">
@@ -16,30 +18,69 @@
       <div class="sett">
         <h1>Settings</h1>
 
-        <!-- <div class="level"> -->
-          <!-- Difficulty Level Combo Box -->
-        <label for="difficulty">Difficulty Level:
-        <select id="difficulty" name="difficulty" class="input-field">
-          <option value="easy">Easy</option>
-          <option value="medium">Medium</option>
-          <option value="hard">Hard</option>
-        </select>
-      </label>
-        <!-- </div> -->
+        <div class="opt">
+          <label for="difficulty">Difficulty Level:</label>
+          <select id="difficulty" name="difficulty" class="input-field">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+          <br />
+          <label for="time">Time (seconds):</label>
+          <input
+            type="number"
+            id="time"
+            value="60"
+            name="time"
+            class="input-field"
+            placeholder="Enter time in minutes"
+          />
+          <br />
 
-        <br />
-        <!-- Time Text Box -->
-        <div class="time">
-          <label for="time">Time (minutes):
-        <input
-          type="number"
-          id="time"
-          name="time"
-          class="input-field"
-          placeholder="Enter time in minutes"
-        /></label>
+          <label for="time">No of question:</label>
+          <input
+            type="number"
+            value="5"
+            id="time"
+            name="time"
+            class="input-field"
+            placeholder="Enter time in minutes"
+          />
+
+          <br />
+          <br />
+          <div class="start-btn-div">
+            <button class="start-btn" id="play" anim="sheen">
+              <img src="./assets/arrow.gif" alt="Button Image" style="width: 20px; height: 20px;">
+
+              Play</button>
+          </div>
         </div>
       </div>
     </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <a href="https://github.com/yourprofile" target="_blank" class="footer-link">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="#about" class="footer-link">About Us</a>
+        <a href="#contact" class="footer-link">Contact Us</a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("play").onclick = function () {
+        var textboxValue = document.getElementById("time").value;
+        localStorage.setItem("textValue", textboxValue);
+        var audio = new Audio("sound.wav");
+        audio.play();
+        setTimeout(() => {
+
+          window.location.href = "./quiz.html";
+
+        }, 180);
+      };
+    </script>
   </body>
 </html>

@@ -1,0 +1,156 @@
+.img{
+  position: relative;
+  /* width: 100px; */
+  height: 100%;
+  width: 50%;
+  background: url("../assets/welcome.jpg");
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.text-div {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  /* text-align: center; */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  /* gap: 20px; */
+  justify-content: center;
+}
+/* .welcome{
+    
+    font-size: 2.5em;
+    margin-top: 50px;
+    
+} */
+
+.welcome {
+  font-family: "Poppins", sans-serif; /* Choose a modern font */
+  color: #6a96e1; /* Use a color from your design palette */
+  font-size: 70px; /* Emphasize with a larger font size */
+  font-weight: bold; /* Make it bold for emphasis */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid; /* Simulate cursor with a border */
+  animation: typing 3s steps(30) 1s forwards,
+    blink 0.75s step-end infinite alternate;
+  max-width: 310px;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0; /* Start with no text visible */
+  }
+  to {
+    width: 100%; /* Finish with the full text visible */
+  }
+}
+
+/* Blink effect for the cursor */
+@keyframes blink {
+  50% {
+    border-color: transparent; /* Hide the cursor halfway */
+  }
+}
+
+.about {
+  font-size: 1em;
+  /* position: relative; */
+
+  /* margin-bottom: 20px; */
+}
+
+.start-btn {
+  font-size: 20px;
+  width: 180px;
+  height: 50px;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(to right, #f4c81a, #fdf257);
+  cursor: pointer;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 0px;
+  border: 0.5px solid black;
+  border-radius: 20px;
+  padding-left: 20px;
+  /* font-size: 16px; */
+}
+
+label {
+  font-size: 20px;
+  padding-left: 10px;
+  /* padding-bottom: 5px; */
+  margin-bottom: 5px;
+}
+
+.text {
+  margin-top: 0;
+  /* padding: 10px 20px; */
+  background-color: #f9f9f9;
+  border-left: 4px solid #6a96e1;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1.6;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 700px;
+  /* margin: 20px auto; */
+  background: linear-gradient(135deg, #6a96e1, #ff4081);
+  color: #fff;
+  padding: 15px;
+}
+
+/* 
+.text cite {
+    display: block;
+    font-family: 'Roboto', sans-serif;    font-size: 1.1em;
+    color: #555;
+    margin-top: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    opacity: 0.7;
+} */
+
+.text cite:hover {
+  color: #6a96e1;
+  text-decoration: underline;
+}
+
+input {
+  font-size: 20px;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+@media (max-width: 1278px) {
+  .text-div{
+    width: 100%;
+  }
+}

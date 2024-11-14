@@ -1,12 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./global.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="./css//global.css" />
+    <link rel="stylesheet" href="./css/get_started.css" />
+  </head>
+  <body>
+    <div class="main-div">
+      <div class="img"></div>
+
+      <div class="text-div">
+        <div class="welcome">Welcome</div>
+        <br /><br />
+        <p class="text">test your intelligence</p>
+        <br />
+        <div class="user">
+          <label for="username">Enter username: </label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Optional"
+            value="user"
+          />
+        </div>
+
+        <br /><br />
+        <div class="start-btn-div">
+          <button class="start-btn" id="get_started_btn" anim="sheen">
+            Get Started!
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <a href="https://github.com/yourprofile" target="_blank" class="footer-link">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="#about" class="footer-link">About Us</a>
+        <a href="#contact" class="footer-link">Contact Us</a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("get_started_btn").onclick = function () {
+        var audio = new Audio("sound.wav");
+        var users = document.getElementById("username").value;
+        localStorage.setItem("textValue1", users);
+        audio.play();
+        setTimeout(() => {
+
+          window.location.href = "./setting.html";
+
+        }, 180);
+
+      };
+    </script>
+  </body>
 </html>
