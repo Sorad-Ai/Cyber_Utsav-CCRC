@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="question.css">
+</head>
+<body>
+  <div id="root">
+    <div class="progress-bar">
+      <div class="progress" style="width: 33.3333%;"></div>
+    </div>
+    <h2>Question <span class="progressUpdate">1</span> of 10</h2>
+    <p class="question">What is the capital of France?</p>
+    <div class="options">
+      <label><input type="radio" name="answer"> Option 1</label>
+      <label><input type="radio" name="answer"> Option 2</label>
+      <label><input type="radio" name="answer"> Option 3</label>
+      <label><input type="radio" name="answer"> Option 4</label>
+    </div>
+    <button disabled>Next</button>
+  </div>
+  <script src="questions.js"module"></script>
+</body>
+</html>
